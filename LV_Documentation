@@ -1,0 +1,45 @@
+Git Grundwissen
+push > Ich lade meine Daten hoch
+pull > Ich ziehe mir Daten runter
+
+So öffnet man ein bereits erstelltes Projekt z.B. von einem Git repository
+
+open an existing project -> zum Ordner wo das Git Repo ist 
+rechts unten in der Ecke -> Gradle console (build system)
+----------------
+So erstellt man ein neues Projekt
+
+File > New Module > Phone & Tablet Module
+Empty Activity > Next > Generate Layout File (XML File)
+Kotlin OR Java? Wir programmieren in java.
+Create project.
+build.gradle (my module)
+minSdkVersion & targetSdkVersion -> sollte die neuerste Version sein (27)
+bei Dependencies -> implementation "com.android.support:appcompat-v7:$supportLibVersion"
+Damit, wenn ich die Version ändern sollte, nur eine Variable ändern muss und nicht Copy-Pasten muss.
+Hammer Icon -> Build
+R -> Resources
+activity_mail.xml -> Erstellen wir ein EditText
+
+<TextView
+  android:id="@+id/title" <- namespace der attribute ist android:id 
+  man muss/soll/wäre schlau eine ID zu vergeben, damit man im Code draufhin referenzieren kann z.B. findViewById(R.id.title)
+ 
+
+<Edit Text
+  android:layout_width="wrap_content"
+  android:layour_height="wrap_content"
+  android:text="hier kann man was eingeben
+/>
+  android.support oben ändern zu LinearLayout
+  app:layout Attribute löschen
+  android:orientation="vertical" erstellen
+  
+  Vor dem Run müssen wir links daneben das richtige Projekt auswählen.
+  
+  Neues VirtualDevice erstellen > AVD Manager in der Tasbar > Create Virtual Device > Nexus 5X > Version auswählen (27) > OK > Magic
+  
+  Eigenes Gerät > Einstellungen > Software version > Build number (Finde einfach die Software Version) >
+  10x auf Build number klicken > MAGIC > System > developer options > USB debugging ALLOW 
+  
+  
